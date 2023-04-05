@@ -3,6 +3,7 @@ package br.com.alurafood.pedidos.dto;
 import br.com.alurafood.pedidos.model.Status;
 import lombok.*;
 
+import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
@@ -19,5 +20,6 @@ public class PedidoDto {
     private List<ItemDoPedidoDto> itens = new ArrayList<>();
 
 
-
+    public <E> PedidoDto(long l, LocalDateTime now, String realizado, ArrayList<E> es, BigDecimal bigDecimal) {
+    }
 }
