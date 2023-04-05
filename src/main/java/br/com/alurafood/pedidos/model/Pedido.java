@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.jetbrains.annotations.NotNull;
 
+import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
@@ -31,4 +32,7 @@ public class Pedido {
 
     @OneToMany(cascade=CascadeType.PERSIST, mappedBy="pedido")
     private List<ItemDoPedido> itens = new ArrayList<>();
+
+    public <E> Pedido(long l, LocalDateTime now, Status realizado, ArrayList<E> es, BigDecimal bigDecimal) {
+    }
 }
