@@ -17,7 +17,7 @@ import lombok.Setter;
 @AllArgsConstructor
 public class ItemDoPedido {
     @Id
-    @GeneratedValue(strategy= GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @NotNull
@@ -26,7 +26,7 @@ public class ItemDoPedido {
 
     private String descricao;
 
-    @ManyToOne(optional=false)
+    @ManyToOne(optional = false)
     private Pedido pedido;
 
 }
