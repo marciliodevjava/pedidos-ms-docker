@@ -63,7 +63,7 @@ public class PedidoResourcer {
     }
 
     @GetMapping("/port")
-    public String retornaPort(@Value("${local.server.port}")String port){
+    public String retornaPort(@Value("${local.server.port}") String port) {
         return String.format("Requisição respondida pela instancia na porta %s", port);
     }
 }
