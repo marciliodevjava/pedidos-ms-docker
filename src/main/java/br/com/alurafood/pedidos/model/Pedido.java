@@ -21,7 +21,7 @@ import java.util.List;
 public class Pedido {
 
     @Id
-    @GeneratedValue(strategy= GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
 
@@ -30,7 +30,7 @@ public class Pedido {
     @Enumerated(EnumType.STRING)
     private Status status;
 
-    @OneToMany(cascade=CascadeType.PERSIST, mappedBy="pedido")
+    @OneToMany(cascade = CascadeType.PERSIST, mappedBy = "pedido")
     private List<ItemDoPedido> itens = new ArrayList<>();
 
     public <E> Pedido(long l, LocalDateTime now, Status realizado, ArrayList<E> es, BigDecimal bigDecimal) {
